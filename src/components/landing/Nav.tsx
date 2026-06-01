@@ -9,7 +9,7 @@ export function Nav() {
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-6xl px-6 py-4">
-        <div className="glass rounded-md flex items-center justify-between px-5 py-2.5">
+        <div className="rounded-md flex items-center justify-between px-5 py-2.5 border border-white/10 bg-[oklch(0.18_0.02_260/0.75)] text-white backdrop-blur-xl shadow-[0_8px_30px_-10px_rgba(0,0,0,0.4)]">
           <a href="#top" className="flex items-center gap-2 font-display font-bold tracking-tight">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_12px_var(--primary)]" />
             gtec<span className="text-muted-foreground">.kz</span>
