@@ -68,8 +68,8 @@ export function Contact() {
           </div>
         </div>
 
-        <footer className="mt-16 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <span>© {new Date().getFullYear()} gtec.kz</span>
+        <footer className="mt-16 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground font-mono">
+          <span>© 2026 gtec.kz</span>
           <span>Алматы · Казахстан</span>
         </footer>
       </div>
