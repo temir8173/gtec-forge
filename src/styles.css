@@ -137,6 +137,19 @@
   color: var(--foreground);
 }
 
+.light-zone [class*="bg-white/"] {
+  background-color: oklch(0.96 0.005 260) !important;
+}
+.light-zone [class*="border-white/"] {
+  border-color: var(--border) !important;
+}
+.light-zone .gradient-text {
+  background: linear-gradient(120deg, var(--foreground) 0%, color-mix(in oklab, var(--primary) 60%, var(--foreground)) 50%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @layer utilities {
   .font-mono {
     font-family: var(--font-mono);
