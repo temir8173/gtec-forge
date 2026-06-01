@@ -12,13 +12,13 @@ export function Services() {
     <section id="services" className="py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-sm text-[color:var(--cyan)] font-medium uppercase tracking-widest">Что мы делаем</p>
+          <p className="label-mono text-[color:var(--cyan)]">Что мы делаем</p>
           <h2 className="mt-3 text-4xl md:text-5xl font-bold">Спектр услуг — от первого экрана до сложных систем</h2>
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {items.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="glass glow-border rounded-2xl p-6">
+            <div key={title} className="glass glow-border rounded-lg p-6">
               <div className="h-11 w-11 rounded-xl flex items-center justify-center bg-primary/15 text-primary">
                 <Icon className="h-5 w-5" />
               </div>

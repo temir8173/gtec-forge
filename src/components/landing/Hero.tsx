@@ -12,15 +12,15 @@ export function Hero() {
       />
 
       <div className="relative mx-auto max-w-5xl px-6 text-center">
-        <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 text-xs text-muted-foreground reveal">
+        <div className="inline-flex items-center gap-2 glass rounded-md px-3 py-1.5 label-mono text-muted-foreground reveal">
           <span className="h-1.5 w-1.5 rounded-full bg-[color:var(--cyan)] animate-pulse" />
           Команда инженеров — Алматы, Казахстан
         </div>
 
         <h1 className="reveal mt-6 text-5xl md:text-7xl font-bold leading-[1.05]" style={{ animationDelay: ".1s" }}>
-          Мы строим <span className="gradient-text">IT-продукты.</span>
+          <span className="gradient-text">Технологии</span> для бизнеса.
           <br />
-          Не шаблоны.
+          С пониманием, зачем.
         </h1>
 
         <p
@@ -34,13 +34,13 @@ export function Hero() {
         <div className="reveal mt-10 flex items-center justify-center gap-3" style={{ animationDelay: ".3s" }}>
           <a
             href="#contact"
-            className="rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-medium hover:opacity-90 transition shadow-[0_10px_40px_-10px_var(--primary)]"
+            className="rounded-md bg-primary text-primary-foreground px-7 py-3.5 font-medium hover:opacity-90 transition shadow-[0_10px_40px_-10px_var(--primary)]"
           >
             Обсудить проект
           </a>
           <a
             href="#work"
-            className="rounded-full glass px-7 py-3.5 font-medium hover:bg-white/[0.06] transition"
+            className="rounded-md glass px-7 py-3.5 font-medium hover:bg-white/[0.06] transition"
           >
             Посмотреть работы
           </a>

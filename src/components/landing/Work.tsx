@@ -25,7 +25,7 @@ export function Work() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div className="max-w-2xl">
-            <p className="text-sm text-[color:var(--cyan)] font-medium uppercase tracking-widest">Работы</p>
+            <p className="label-mono text-[color:var(--cyan)]">Работы</p>
             <h2 className="mt-3 text-4xl md:text-5xl font-bold">Избранные проекты</h2>
           </div>
           <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition">
@@ -35,7 +35,7 @@ export function Work() {
 
         <div className="mt-14 grid md:grid-cols-3 gap-5">
           {cases.map((c) => (
-            <article key={c.name} className="glass glow-border rounded-2xl overflow-hidden group">
+            <article key={c.name} className="glass glow-border rounded-lg overflow-hidden group">
               <div className={`relative h-52 bg-gradient-to-br ${c.gradient} overflow-hidden`}>
                 <div className="absolute inset-0 grid-bg opacity-40" />
                 <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between">
