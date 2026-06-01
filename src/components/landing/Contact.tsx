@@ -7,7 +7,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-28">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="glass rounded-3xl p-8 md:p-14 relative overflow-hidden">
+        <div className="glass rounded-lg p-8 md:p-14 relative overflow-hidden">
           <div
             className="absolute -top-32 -right-32 h-80 w-80 rounded-full opacity-30 blur-3xl"
             style={{ background: "var(--primary)" }}
