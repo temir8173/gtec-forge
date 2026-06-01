@@ -19,7 +19,7 @@ export function Contact() {
 
           <div className="relative grid md:grid-cols-2 gap-12">
             <div>
-              <p className="text-sm text-[color:var(--cyan)] font-medium uppercase tracking-widest">Контакты</p>
+              <p className="label-mono text-[color:var(--cyan)]">Контакты</p>
               <h2 className="mt-3 text-4xl md:text-5xl font-bold leading-tight">
                 Есть задача?<br />Расскажите — <span className="gradient-text">разберёмся.</span>
               </h2>
@@ -27,15 +27,18 @@ export function Contact() {
                 Отвечаем в течение 1 рабочего дня.
               </p>
 
-              <div className="mt-8 space-y-3 text-sm">
+              <div className="mt-8 space-y-3 text-sm font-mono">
                 <a href="mailto:hello@gtec.kz" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition">
-                  <Mail className="h-4 w-4" /> hello@gtec.kz
+                  <Mail className="h-4 w-4" />
+                  <span>hello@gtec.kz</span>
                 </a>
                 <a href="https://wa.me/77000000000" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition">
-                  <MessageCircle className="h-4 w-4" /> WhatsApp
+                  <MessageCircle className="h-4 w-4" />
+                  <span>WhatsApp</span>
                 </a>
                 <a href="https://t.me/gtec_kz" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition">
-                  <Send className="h-4 w-4" /> Telegram
+                  <Send className="h-4 w-4" />
+                  <span>Telegram</span>
                 </a>
               </div>
             </div>
