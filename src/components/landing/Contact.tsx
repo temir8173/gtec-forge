@@ -44,8 +44,8 @@ export function Contact() {
             </div>
 
             {sent ? (
-              <div className="glass rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-                <div className="h-14 w-14 rounded-full bg-primary/20 text-primary flex items-center justify-center text-2xl">✓</div>
+              <div className="glass rounded-lg p-8 flex flex-col items-center justify-center text-center">
+                <div className="h-14 w-14 rounded-md bg-primary/20 text-primary flex items-center justify-center text-2xl">✓</div>
                 <h3 className="mt-4 text-xl font-semibold">Спасибо!</h3>
                 <p className="mt-2 text-sm text-muted-foreground">Ответим в течение рабочего дня.</p>
               </div>
@@ -59,7 +59,7 @@ export function Contact() {
                 <Field label="Опишите задачу" name="message" textarea required />
                 <button
                   type="submit"
-                  className="w-full rounded-xl bg-primary text-primary-foreground py-3.5 font-medium hover:opacity-90 transition shadow-[0_10px_40px_-10px_var(--primary)]"
+                  className="w-full rounded-md bg-primary text-primary-foreground py-3.5 font-medium hover:opacity-90 transition shadow-[0_10px_40px_-10px_var(--primary)]"
                 >
                   Отправить
                 </button>
