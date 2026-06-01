@@ -34,12 +34,14 @@ function Index() {
     <main className="min-h-screen">
       <Nav />
       <Hero />
-      <Services />
-      <Approach />
-      <Stack />
-      <Work />
-      <Team />
-      <Contact />
+      <div className="light-zone">
+        <Services />
+        <Approach />
+        <Stack />
+        <Work />
+        <Team />
+        <Contact />
+      </div>
     </main>
   );
 }
