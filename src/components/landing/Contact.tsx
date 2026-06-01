@@ -79,10 +79,10 @@ export function Contact() {
 
 function Field({ label, name, textarea, required }: { label: string; name: string; textarea?: boolean; required?: boolean }) {
   const cls =
-    "w-full rounded-xl bg-white/[0.03] border border-white/10 px-4 py-3 text-sm outline-none focus:border-primary/60 focus:bg-white/[0.05] transition placeholder:text-muted-foreground/60";
+    "w-full rounded-md bg-white/[0.03] border border-white/10 px-4 py-3 text-sm outline-none focus:border-primary/60 focus:bg-white/[0.05] transition placeholder:text-muted-foreground/60";
   return (
     <label className="block">
-      <span className="text-xs uppercase tracking-widest text-muted-foreground">{label}</span>
+      <span className="label-mono text-muted-foreground">{label}</span>
       {textarea ? (
         <textarea name={name} required={required} rows={4} className={`mt-2 ${cls} resize-none`} />
       ) : (
