@@ -10,15 +10,15 @@ export function Team() {
     <section id="team" className="py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-sm text-[color:var(--cyan)] font-medium uppercase tracking-widest">Команда</p>
+          <p className="label-mono text-[color:var(--cyan)]">Команда</p>
           <h2 className="mt-3 text-4xl md:text-5xl font-bold">Люди, которые делают проекты</h2>
         </div>
 
         <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-5">
           {team.map((m) => (
-            <div key={m.name} className="glass glow-border rounded-2xl p-6 text-center">
+            <div key={m.name} className="glass glow-border rounded-lg p-6 text-center">
               <div
-                className="mx-auto h-20 w-20 rounded-full flex items-center justify-center text-2xl font-bold font-display"
+                className="mx-auto h-20 w-20 rounded-md flex items-center justify-center text-2xl font-bold font-display"
                 style={{
                   background: "linear-gradient(135deg, color-mix(in oklab, var(--primary) 80%, transparent), color-mix(in oklab, var(--cyan) 60%, transparent))",
                 }}

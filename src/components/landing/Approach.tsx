@@ -23,13 +23,13 @@ export function Approach() {
     <section id="approach" className="py-28 relative">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-sm text-[color:var(--cyan)] font-medium uppercase tracking-widest">Наш подход</p>
+          <p className="label-mono text-[color:var(--cyan)]">Наш подход</p>
           <h2 className="mt-3 text-4xl md:text-5xl font-bold">Чем мы отличаемся</h2>
         </div>
 
         <div className="mt-14 grid md:grid-cols-3 gap-5">
           {points.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="glass rounded-2xl p-7 relative overflow-hidden">
+            <div key={title} className="glass rounded-lg p-7 relative overflow-hidden">
               <div
                 className="absolute -top-20 -right-20 h-40 w-40 rounded-full opacity-20 blur-2xl"
                 style={{ background: "var(--primary)" }}
