@@ -5,6 +5,7 @@ type Service = {
   title: string;
   desc: string;
   meta: string;
+  sysCode: string;
   tags: { label: string; accent?: "indigo" | "cyan" }[];
   span: "wide" | "narrow";
 };
@@ -15,6 +16,7 @@ const items: Service[] = [
     title: "Лендинги и сайты",
     desc: "Быстро, чисто, с целью. Создаём интерфейсы, которые превращают посетителей в клиентов через выверенный UX.",
     meta: "ID_01 // WEB_CORE",
+    sysCode: "SYS_V01",
     tags: [
       { label: "#performance" },
       { label: "#seo_ready" },
@@ -27,6 +29,7 @@ const items: Service[] = [
     title: "Веб-приложения",
     desc: "Сложная логика, удобный интерфейс. Разработка масштабируемых SaaS и корпоративных систем.",
     meta: "ID_02 // APP_LOGIC",
+    sysCode: "SYS_V02",
     tags: [{ label: "#react" }, { label: "#api_driven" }],
     span: "narrow",
   },
@@ -35,6 +38,7 @@ const items: Service[] = [
     title: "E-commerce",
     desc: "Магазины, которые продают. Интеграция с платёжными шлюзами и складскими системами.",
     meta: "ID_03 // SALE_MOD",
+    sysCode: "SYS_V03",
     tags: [{ label: "#checkout" }, { label: "#scalability", accent: "cyan" }],
     span: "narrow",
   },
@@ -43,6 +47,7 @@ const items: Service[] = [
     title: "IT-консалтинг",
     desc: "Помогаем выбрать правильное решение. Аудит кода, архитектуры и выбор стека под ваши задачи.",
     meta: "ID_04 // STRAT_DEP",
+    sysCode: "SYS_V04",
     tags: [
       { label: "#architecture" },
       { label: "#security_audit" },
