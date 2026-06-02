@@ -1,3 +1,7 @@
+import { useEffect, useState } from "react";
+
+type Lang = "ru" | "kk";
+
 export function Nav() {
   const links = [
     { href: "#services", label: "Услуги" },
@@ -6,6 +10,22 @@ export function Nav() {
     { href: "#work", label: "Работы" },
     { href: "#team", label: "Команда" },
   ];
+
+  const [lang, setLang] = useState<Lang>("ru");
+
+  useEffect(() => {
+    const saved = (typeof window !== "undefined" && (localStorage.getItem("lang") as Lang | null)) || null;
+    if (saved === "ru" || saved === "kk") setLang(saved);
+  }, []);
+
+  const choose = (l: Lang) => {
+    setLang(l);
+    try {
+      localStorage.setItem("lang", l);
+      document.documentElement.lang = l;
+    } catch {}
+  };
+
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-6xl px-6 py-4">
@@ -21,12 +41,39 @@ export function Nav() {
               </a>
             ))}
           </nav>
-          <a
-            href="#contact"
-            className="text-sm rounded-md bg-primary text-primary-foreground px-4 py-1.5 font-medium hover:opacity-90 transition"
-          >
-            Обсудить
-          </a>
+          <div className="flex items-center gap-3">
+            <div
+              role="group"
+              aria-label="Язык / Тіл"
+              className="hidden sm:inline-flex items-center rounded-md border border-white/10 bg-white/[0.03] p-0.5 font-mono text-[11px] uppercase tracking-wider"
+            >
+              {(["ru", "kk"] as const).map((l) => {
+                const active = lang === l;
+                return (
+                  <button
+                    key={l}
+                    type="button"
+                    onClick={() => choose(l)}
+                    aria-pressed={active}
+                    className={
+                      "px-2 py-1 rounded-[5px] transition-colors " +
+                      (active
+                        ? "bg-primary/15 text-primary"
+                        : "text-muted-foreground hover:text-foreground")
+                    }
+                  >
+                    {l === "ru" ? "Ru" : "Kk"}
+                  </button>
+                );
+              })}
+            </div>
+            <a
+              href="#contact"
+              className="text-sm rounded-md bg-primary text-primary-foreground px-4 py-1.5 font-medium hover:opacity-90 transition"
+            >
+              Обсудить
+            </a>
+          </div>
         </div>
       </div>
     </header>
