@@ -77,10 +77,10 @@ export function Services() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-12 gap-px bg-border border border-border rounded-sm overflow-hidden">
-          {items.map(({ icon: Icon, title, desc, meta, tags, span }) => (
+          {items.map(({ icon: Icon, title, desc, meta, sysCode, tags, span }) => (
             <div
               key={title}
-              className={`relative bg-card p-8 transition-colors hover:bg-muted ${
+              className={`group relative bg-card p-8 transition-colors hover:bg-muted ${
                 span === "wide" ? "md:col-span-7" : "md:col-span-5"
               }`}
             >
@@ -91,8 +91,56 @@ export function Services() {
               </span>
 
               <div className="flex flex-col h-full">
-                <div className="mb-12 w-10 h-10 rounded-sm bg-primary/10 border border-primary/15 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-primary" />
+                {/* Engineering blueprint icon badge */}
+                <div className="mb-12 relative w-14 h-14 select-none">
+                  {/* Base + grid */}
+                  <div className="absolute inset-0 bg-primary/[0.04] border border-primary/15" />
+                  <div
+                    className="absolute inset-0 opacity-[0.12]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(var(--primary) 0.5px, transparent 0.5px), linear-gradient(90deg, var(--primary) 0.5px, transparent 0.5px)",
+                      backgroundSize: "8px 8px",
+                    }}
+                  />
+
+                  {/* Crosshairs */}
+                  <div className="absolute top-1/2 left-1 w-1 h-px bg-primary/40 -translate-y-1/2" />
+                  <div className="absolute top-1/2 right-1 w-1 h-px bg-primary/40 -translate-y-1/2" />
+                  <div className="absolute top-1 left-1/2 h-1 w-px bg-primary/40 -translate-x-1/2" />
+                  <div className="absolute bottom-1 left-1/2 h-1 w-px bg-primary/40 -translate-x-1/2" />
+
+                  {/* Drafting corner extensions */}
+                  <div className="absolute -top-1 -left-1 w-3 h-3 border-t border-l border-primary/70 transition-all duration-300 group-hover:-top-1.5 group-hover:-left-1.5" />
+                  <div className="absolute -bottom-1 -right-1 w-3 h-3 border-b border-r border-primary/70 transition-all duration-300 group-hover:-bottom-1.5 group-hover:-right-1.5" />
+
+                  {/* Icon */}
+                  <div className="relative z-10 w-full h-full flex items-center justify-center">
+                    <Icon
+                      strokeWidth={1.5}
+                      className="w-6 h-6 text-primary"
+                    />
+                  </div>
+
+                  {/* Micro label */}
+                  <div
+                    className="absolute -bottom-1.5 left-1 text-[7px] font-bold bg-card px-0.5 border-x font-mono leading-none"
+                    style={{
+                      color: "var(--cyan)",
+                      borderColor: "color-mix(in oklab, var(--cyan) 30%, transparent)",
+                    }}
+                  >
+                    {sysCode}
+                  </div>
+
+                  {/* Cyan accent dot */}
+                  <div
+                    className="absolute top-1.5 right-1.5 w-1 h-1 rounded-full"
+                    style={{
+                      backgroundColor: "var(--cyan)",
+                      boxShadow: "0 0 4px color-mix(in oklab, var(--cyan) 60%, transparent)",
+                    }}
+                  />
                 </div>
 
                 <h3 className="text-2xl font-bold">{title}</h3>
@@ -100,6 +148,17 @@ export function Services() {
 
                 <div className="mt-8 flex flex-wrap gap-2">
                   {tags.map((t) => (
+                    <span
+                      key={t.label}
+                      className={`px-2 py-1 text-[10px] font-medium uppercase rounded-sm font-mono ${tagClass(t.accent)}`}
+                    >
+                      {t.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
                     <span
                       key={t.label}
                       className={`px-2 py-1 text-[10px] font-medium uppercase rounded-sm font-mono ${tagClass(t.accent)}`}
