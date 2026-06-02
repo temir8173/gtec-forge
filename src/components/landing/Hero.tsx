@@ -34,27 +34,25 @@ export function Hero() {
         <div className="reveal mt-10 flex items-center justify-center gap-3" style={{ animationDelay: ".3s" }}>
           <a
             href="#contact"
-            className="group relative inline-flex items-center gap-3 rounded-md px-7 py-3.5 font-medium text-primary-foreground overflow-hidden transition-all duration-300 hover:-translate-y-0.5"
+            className="group relative inline-flex items-center gap-3 rounded-md bg-primary text-primary-foreground px-7 py-3.5 transition-all duration-300 hover:-translate-y-0.5"
             style={{
-              backgroundImage:
-                "linear-gradient(135deg, color-mix(in oklab, var(--primary) 92%, white) 0%, var(--primary) 55%, color-mix(in oklab, var(--primary) 80%, black) 100%)",
+              fontFamily: "var(--font-mono)",
+              fontSize: "0.85rem",
+              letterSpacing: "0.04em",
               boxShadow:
-                "0 1px 0 0 color-mix(in oklab, white 25%, transparent) inset, 0 0 0 1px color-mix(in oklab, var(--primary) 40%, transparent), 0 14px 40px -12px color-mix(in oklab, var(--primary) 70%, transparent)",
+                "0 1px 0 0 color-mix(in oklab, white 14%, transparent) inset, 0 10px 30px -14px color-mix(in oklab, var(--primary) 80%, transparent)",
             }}
           >
-            <span
-              aria-hidden
-              className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
-            />
-            <span className="relative tracking-tight">Обсудить проект</span>
-            <span
-              aria-hidden
-              className="relative flex h-5 w-5 items-center justify-center rounded-full bg-white/15 transition-all duration-300 group-hover:bg-white/25 group-hover:translate-x-0.5"
+            <span>Обсудить проект</span>
+            <svg
+              width="14"
+              height="10"
+              viewBox="0 0 14 10"
+              fill="none"
+              className="transition-transform duration-300 group-hover:translate-x-1"
             >
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" className="transition-transform duration-300 group-hover:translate-x-0.5">
-                <path d="M1 5h7m0 0L5 2m3 3L5 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
+              <path d="M1 5h11m0 0L8 1m4 4L8 9" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </a>
           <a
             href="#work"
