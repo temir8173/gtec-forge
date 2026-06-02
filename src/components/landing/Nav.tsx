@@ -47,7 +47,7 @@ export function Nav() {
               aria-label="Язык / Тіл"
               className="hidden sm:inline-flex items-center rounded-md border border-white/10 bg-white/[0.03] p-0.5 font-mono text-[11px] uppercase tracking-wider"
             >
-              {(["ru", "kk"] as const).map((l) => {
+              {(["kk", "ru"] as const).map((l) => {
                 const active = lang === l;
                 return (
                   <button
