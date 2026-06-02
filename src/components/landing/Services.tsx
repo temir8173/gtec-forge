@@ -159,17 +159,6 @@ export function Services() {
               </div>
             </div>
           ))}
-                    <span
-                      key={t.label}
-                      className={`px-2 py-1 text-[10px] font-medium uppercase rounded-sm font-mono ${tagClass(t.accent)}`}
-                    >
-                      {t.label}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
 
         <div className="mt-10 flex items-center gap-4 text-muted-foreground">
